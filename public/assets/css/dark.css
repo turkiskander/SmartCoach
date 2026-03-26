@@ -1,0 +1,65 @@
+html[data-theme="dark"] {
+  /* Polices de caractères */
+
+  /* Couleurs de fond et de surface (Mode Sombre par défaut) */
+  --bg: #000000;
+  --bg2: #0D0D0D;
+  --panel: rgba(255, 255, 255, 0.04);
+  --panel2: rgba(255, 255, 255, 0.07);
+  --stroke: rgba(255, 255, 255, 0.10);
+  --text: rgba(255, 255, 255, 0.95);
+  --muted: rgba(255, 255, 255, 0.65);
+
+  /* Couleurs d'accentuation (Or Premium) */
+  --accent: #FFB800;
+  /* Vibrant Gold */
+  --accent2: #E6A800;
+  /* Deep Gold */
+  --accent3: #FFD700;
+  /* Bright Gold */
+
+  /* Ombres et arrondis */
+  --shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+  --shadow2: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+  /* Largeur max du contenu */
+}
+html[data-theme="dark"] body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 15% 25%, rgba(255, 184, 0, 0.12) 0%, transparent 45%),
+    /* Gold Tech Glow */
+    radial-gradient(circle at 85% 75%, rgba(255, 138, 0, 0.08) 0%, transparent 55%),
+    /* Deep Gold Core */
+    radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+  filter: blur(60px);
+  animation: mesh-move 16s ease-in-out infinite alternate;
+  opacity: 1;
+}
+html[data-theme="dark"] body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    radial-gradient(ellipse at 30% 20%, rgba(255, 184, 0, 0.03) 0%, transparent 40%),
+    radial-gradient(ellipse at 70% 60%, rgba(255, 215, 0, 0.02) 0%, transparent 50%);
+  animation: shards-drift 22s linear infinite alternate;
+  pointer-events: none;
+}
+html[data-theme="dark"] {
+  --luxGold: #FFD700;
+  --luxGold2: #FF8A00;
+  --luxBlack: #000000;
+  --luxBlack2: #121212;
+  --rolexLine: rgba(0, 0, 0, 0.15);
+}
+html[data-theme="dark"] {
+}
+html[data-theme="dark"] #feature-modal {
+  background: rgba(0, 0, 0, 0.60);
+}
